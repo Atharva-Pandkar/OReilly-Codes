@@ -6,6 +6,7 @@ def normal_pdf(x:float, mu:float = 0, sigma:float = 1) -> float:
     return (math.exp(-(x-mu)**2 / 2 / sigma**2) / SQRT_TWO_PI * sigma)
 
 def normal_cdf( x:float, mu:float = 0, sigma: float = 1) -> float:
+    import math
     return (1 + math.erf( (x - mu) / math.sqrt(2) / sigma )) /2
 
 def inverse_normal_cdf( p:float,
@@ -32,6 +33,7 @@ def inverse_normal_cdf( p:float,
 
 def bernoulli_trial(p: float) -> int:
     """ Returns 1 with probabitlity p and 0 with probabitlity 1-p """
+    import random
     return 1 if random.random() < p else 0
 
 def binomial(n: int, p: float) -> int:
