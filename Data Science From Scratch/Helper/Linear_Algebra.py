@@ -1,4 +1,5 @@
 
+Vector = list[float]
 def add(v: list[float], w: list[float]) -> list[float]:
     """ Add corresponding elements"""
     assert len(v) == len(w) # Vectors must be of the same length
