@@ -63,3 +63,15 @@ def distance(v: list[float], w:list[float]) -> float:
 def distance_better(v:list[float],w:list[float]) -> float:
     """ Computes the distance between v and w """
     return magnitude(sub(v,w))
+from typing import Callable
+def make_matrix( num_rows: int,
+                num_cols: int,
+                entry_fn: Callable[[int,int], float]) -> Matrix:
+    """
+    returns a num_rows x nums_cols matrix 
+    whose (i,j)-th entry is entry_fn(1,j)
+    """
+    
+    return [[entry_fn(i,j)
+             for j in range(num_cols)
+             for i in range(num_rows)]]
