@@ -65,7 +65,7 @@ def interquartile_range(xs: list[float]) -> float:
 
 def covariance(xs: list[float], ys: list[float]) -> float:
     assert len(xs) == len(ys), "The length of both List should be the same"
-
+    import Linear_Algebra
     return Linear_Algebra.dot(de_mean(xs),de_mean(ys))/ (len(xs)-1)
 
 def correlations(xs:list[float], ys:list[float] ) -> float:
